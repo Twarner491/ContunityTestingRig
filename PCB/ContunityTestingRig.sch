@@ -821,6 +821,10 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <part name="D21" library="eagle_fab" deviceset="DIODE_SCHOTTKY_CDBM1100-G" device="" value="SCHOTTKY"/>
 <part name="D22" library="eagle_fab" deviceset="DIODE_SCHOTTKY_CDBM1100-G" device="" value="SCHOTTKY"/>
 <part name="D23" library="eagle_fab" deviceset="DIODE_SCHOTTKY_CDBM1100-G" device="" value="SCHOTTKY"/>
+<part name="D24" library="eagle_fab" deviceset="DIODE_SCHOTTKY_CDBM1100-G" device="" value="SCHOTTKY"/>
+<part name="D25" library="eagle_fab" deviceset="DIODE_SCHOTTKY_CDBM1100-G" device="" value="SCHOTTKY"/>
+<part name="D26" library="eagle_fab" deviceset="DIODE_SCHOTTKY_CDBM1100-G" device="" value="SCHOTTKY"/>
+<part name="D27" library="eagle_fab" deviceset="DIODE_SCHOTTKY_CDBM1100-G" device="" value="SCHOTTKY"/>
 </parts>
 <sheets>
 <sheet>
@@ -912,6 +916,10 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <instance part="D21" gate="G$1" x="35.56" y="33.02" smashed="yes" rot="R180"/>
 <instance part="D22" gate="G$1" x="35.56" y="27.94" smashed="yes" rot="R180"/>
 <instance part="D23" gate="G$1" x="35.56" y="22.86" smashed="yes" rot="R180"/>
+<instance part="D24" gate="G$1" x="-2.54" y="55.88" smashed="yes" rot="R270"/>
+<instance part="D25" gate="G$1" x="2.54" y="25.4" smashed="yes" rot="R90"/>
+<instance part="D26" gate="G$1" x="63.5" y="-7.62" smashed="yes"/>
+<instance part="D27" gate="G$1" x="7.62" y="25.4" smashed="yes" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -1043,14 +1051,9 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 </net>
 <net name="8" class="0">
 <segment>
-<pinref part="D9" gate="G$1" pin="KATHODE"/>
-<pinref part="SV1" gate="-8" pin="S"/>
-<wire x1="76.2" y1="-7.62" x2="66.04" y2="-7.62" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="1"/>
 <wire x1="43.18" y1="35.56" x2="45.72" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="-7.62" x2="43.18" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="-7.62" x2="43.18" y2="22.86" width="0.1524" layer="91"/>
-<junction x="66.04" y="-7.62"/>
 <pinref part="D21" gate="G$1" pin="KATHODE"/>
 <wire x1="43.18" y1="22.86" x2="43.18" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="27.94" x2="43.18" y2="33.02" width="0.1524" layer="91"/>
@@ -1063,7 +1066,8 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <pinref part="D23" gate="G$1" pin="KATHODE"/>
 <wire x1="38.1" y1="22.86" x2="43.18" y2="22.86" width="0.1524" layer="91"/>
 <junction x="43.18" y="22.86"/>
-<label x="71.12" y="-7.62" size="1.778" layer="95"/>
+<pinref part="D26" gate="G$1" pin="KATHODE"/>
+<wire x1="60.96" y1="-7.62" x2="43.18" y2="-7.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="10" class="0">
@@ -1126,8 +1130,6 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 </net>
 <net name="1" class="0">
 <segment>
-<pinref part="SV1" gate="-1" pin="S"/>
-<wire x1="-2.54" y1="50.8" x2="-2.54" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="D1" gate="G$1" pin="KATHODE"/>
 <wire x1="-2.54" y1="60.96" x2="2.54" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="2.54" y1="60.96" x2="2.54" y2="58.42" width="0.1524" layer="91"/>
@@ -1162,15 +1164,12 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <wire x1="109.22" y1="60.96" x2="109.22" y2="-7.62" width="0.1524" layer="91"/>
 <junction x="109.22" y="-7.62"/>
 <label x="-2.54" y="45.72" size="1.778" layer="95" rot="R90"/>
+<pinref part="D24" gate="G$1" pin="KATHODE"/>
+<wire x1="-2.54" y1="58.42" x2="-2.54" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="4" class="0">
 <segment>
-<pinref part="D4" gate="G$1" pin="KATHODE"/>
-<pinref part="SV1" gate="-2" pin="S"/>
-<wire x1="2.54" y1="38.1" x2="2.54" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="2.54" y1="27.94" x2="2.54" y2="10.16" width="0.1524" layer="91"/>
-<junction x="2.54" y="27.94"/>
 <pinref part="D7" gate="G$1" pin="KATHODE"/>
 <wire x1="2.54" y1="10.16" x2="12.7" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="10.16" x2="12.7" y2="15.24" width="0.1524" layer="91"/>
@@ -1182,7 +1181,6 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <wire x1="-5.08" y1="63.5" x2="-5.08" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="-5.08" y1="10.16" x2="2.54" y2="10.16" width="0.1524" layer="91"/>
 <junction x="2.54" y="10.16"/>
-<label x="2.54" y="33.02" size="1.778" layer="95" rot="R90"/>
 <wire x1="2.54" y1="10.16" x2="2.54" y2="-17.78" width="0.1524" layer="91"/>
 <pinref part="D17" gate="G$1" pin="KATHODE"/>
 <wire x1="55.88" y1="-12.7" x2="53.34" y2="-12.7" width="0.1524" layer="91"/>
@@ -1197,6 +1195,8 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <junction x="40.64" y="48.26"/>
 <wire x1="2.54" y1="-17.78" x2="53.34" y2="-17.78" width="0.1524" layer="91"/>
 <junction x="53.34" y="-17.78"/>
+<pinref part="D25" gate="G$1" pin="KATHODE"/>
+<wire x1="2.54" y1="22.86" x2="2.54" y2="10.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -1208,12 +1208,7 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <wire x1="48.26" y1="38.1" x2="43.18" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="22.86" y1="40.64" x2="43.18" y2="40.64" width="0.1524" layer="91"/>
-<pinref part="SV1" gate="-4" pin="S"/>
-<pinref part="D5" gate="G$1" pin="KATHODE"/>
 <wire x1="43.18" y1="40.64" x2="45.72" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="7.62" y1="38.1" x2="7.62" y2="27.94" width="0.1524" layer="91"/>
-<junction x="7.62" y="27.94"/>
-<wire x1="7.62" y1="7.62" x2="7.62" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="D8" gate="G$1" pin="KATHODE"/>
 <wire x1="17.78" y1="15.24" x2="17.78" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="7.62" x2="7.62" y2="7.62" width="0.1524" layer="91"/>
@@ -1225,9 +1220,47 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <wire x1="22.86" y1="-27.94" x2="22.86" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="D20" gate="G$1" pin="KATHODE"/>
 <wire x1="55.88" y1="-27.94" x2="22.86" y2="-27.94" width="0.1524" layer="91"/>
-<label x="7.62" y="33.02" size="1.778" layer="95" rot="R90"/>
 <wire x1="43.18" y1="38.1" x2="43.18" y2="40.64" width="0.1524" layer="91"/>
 <junction x="43.18" y="40.64"/>
+<pinref part="D27" gate="G$1" pin="KATHODE"/>
+<wire x1="7.62" y1="22.86" x2="7.62" y2="7.62" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<pinref part="D24" gate="G$1" pin="ANODE"/>
+<pinref part="SV1" gate="-1" pin="S"/>
+<wire x1="-2.54" y1="53.34" x2="-2.54" y2="50.8" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$11" class="0">
+<segment>
+<pinref part="SV1" gate="-2" pin="S"/>
+<pinref part="D4" gate="G$1" pin="KATHODE"/>
+<wire x1="2.54" y1="38.1" x2="2.54" y2="27.94" width="0.1524" layer="91"/>
+<label x="2.54" y="33.02" size="1.778" layer="95" rot="R90"/>
+<pinref part="D25" gate="G$1" pin="ANODE"/>
+<junction x="2.54" y="27.94"/>
+</segment>
+</net>
+<net name="N$12" class="0">
+<segment>
+<pinref part="SV1" gate="-8" pin="S"/>
+<pinref part="D9" gate="G$1" pin="KATHODE"/>
+<wire x1="76.2" y1="-7.62" x2="66.04" y2="-7.62" width="0.1524" layer="91"/>
+<label x="71.12" y="-7.62" size="1.778" layer="95"/>
+<pinref part="D26" gate="G$1" pin="ANODE"/>
+<junction x="66.04" y="-7.62"/>
+</segment>
+</net>
+<net name="N$13" class="0">
+<segment>
+<pinref part="SV1" gate="-4" pin="S"/>
+<pinref part="D5" gate="G$1" pin="KATHODE"/>
+<wire x1="7.62" y1="38.1" x2="7.62" y2="27.94" width="0.1524" layer="91"/>
+<label x="7.62" y="33.02" size="1.778" layer="95" rot="R90"/>
+<pinref part="D27" gate="G$1" pin="ANODE"/>
+<junction x="7.62" y="27.94"/>
 </segment>
 </net>
 </nets>
