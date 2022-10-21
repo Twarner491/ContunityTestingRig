@@ -3,5 +3,6 @@
 
 ## Sources -
  - [https://www.tomshardware.com/how-to/raspberry-pi-pico-setup](https://www.tomshardware.com/how-to/raspberry-pi-pico-setup)
+ - [https://datasheets.raspberrypi.com/picow/pico-w-datasheet.pdf](https://datasheets.raspberrypi.com/picow/pico-w-datasheet.pdf)
 
 ## Documentation -
