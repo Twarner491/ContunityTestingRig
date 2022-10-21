@@ -13,67 +13,65 @@
 #
 #Setup for raspberry pi pico found on this website:
 #https://www.tomshardware.com/how-to/raspberry-pi-pico-setup
+#
+#
+#TODO:
+#Build Static Site
+#Read from Static Site
+#Edit HTML File and Republish Site
 #-----------------------------------------------------------------------------------------------------------------------------------------
 
-import machine
+#import machine
 import rp2
-from machine import Timer
+#from machine import Timer
 from machine import Pin
 import utime
 
 
-inPinNums = [4,5,6,7]
-#gpio input pins
-outPinNums = [9,10,11,12,14,15,16,17,19]
-#gpio output pins
+inPinNums = [3,4,5,6] #gpio input pins
+outPinNums = [7,8,9,10,11,12,13,14,15] #gpio output pins
 
-inputPins = [0,0,0,0]
-#empty pin object array (input)
-    
-outputPins = [0,0,0,0,0,0,0,0,0,0,0,0,0]
-#empty pin object array (output)
-
-pinout = [[1,2,3,4,5,6,7,8,9], [0,0,0,0,0,0,0,0,0]]
-#pin configuration
+inputPins = [] #empty pin object array (input)
+outputPins = []
 
 for i in range(len(inPinNums)):
-    inputPins[i] = Pin(inPinNums[i], Pin.IN)
-    #fill input pin object array with new pin object
+    inputPins.append(Pin(inPinNums[i]), Pin.IN) #fill input pin object array with new pin object
 
 for i in range(len(outPinNums)):
-    outputPins[i] = Pin(outPinNums[i], Pin.OUT)
-    #fill output pin object array with new pin object
-
+    outputPins.append(Pin(outPinNums[i], Pin.OUT))
+    outputPins[i].value(0) #default value
+    
 
 
 def checkPinout():
-    r = "Pinout:/n"
+    r = "Pinout:"
     #String to return
     
     for i in range(len(outputPins)):
 #    increment through output pins
-        outputPins[i-1].high()
-        #set pin to high
+        try:
+            outputPins[i].value(1)         #set pin to high
+        
+        except:
+            utime.sleep(0.01)
+
         utime.sleep(0.01)
-        #small delay before read
+
         p1 = inputPins[0].value()
         p2 = inputPins[1].value()
         p3 = inputPins[2].value()
-        p4 = inputPins[3].value()
-        #input pin value (high = 1, low = 0) is set to variable
-        outputPins[i-1].low()
-        #reset pin
+        p4 = inputPins[3].value() #read input pin value (high = 1, low = 0)
+        try:
+            outputPins[i].value(0) #reset pin to low
+        except:
+            utime.sleep(0.01) #reset pin
 
-        pin = bin2num(p1, p2, p3, p4)
-        #set pin to its binary equivalent (4 bit, p4*8 + p3 * 4 + p2 * 2 + p1 * 1)
-        pinout[1][i] = pin
-        #set second row of corresponding pin in pinout to the resulting pin value
+        pin = bin2num(p1, p2, p3, p4) #set pin to its binary equivalent (4 bit)
+        pinout[1][i] = pin #set corresponding pin row in pinout to the resulting pin number
         
-        r += "Pin " + i + " --> Pin " + pin + "/n"
-        #build string equivalent to array
-        
-    return [pinout, r]
-#return list including array and string
+        r += "Pin " + str(i) + " --> Pin " + str(pin) #build string equivalent to array (display purposes)
+      
+    return [pinout, r] #return list including array and string
 
 def bin2num(a, b, c, d):
     z = a
@@ -85,5 +83,13 @@ def bin2num(a, b, c, d):
     #return the equivalent pin value
 
 
-print(checkPinout())
-#debug code
+#STATIC SITE SETUP
+
+while True:
+    #check button for static site launch
+#     (maybe add button to gpio pins to initialize static site instead of generate when connected to power)
+        #launch static site
+    #check static site for pinout request
+        #checkPinout()
+        #build html file based on pinout
+        #push new html file to static site
