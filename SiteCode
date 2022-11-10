@@ -9,6 +9,15 @@
 #set up svg file template
 #write method to edit fill variable to svg and assign to variable
 
+#add -1 case for getHeaderFormat (header file incorrectly formatted, push error to site)
+#add -2 case for getHeaderFormat (no file found, push error to site)
+#add returns 0 confirmation for getHeaderFormat
+#run checkPinout() differently based on numPins from headerformat
+#add -2 case for getSVGFormat (no format file found)
+#add returns 0 confirmation for getSVGFormat
+#<g> group header for adding text labels to svg pin objects
+#determine if header config file is necessary, do they want a specific config for each header type?
+
 import rp2
 from machine import Pin
 import utime
@@ -17,8 +26,8 @@ import socket
 import network
 
 
-ssid = 'Network Name'
-password = 'Network Password'
+ssid = 'CLSLabs'
+password = 'clshawks'
 
 
 
@@ -31,7 +40,52 @@ def main():
     connect()
     updateSite()
 
+def getSVGFormat():
+    with open("pin.svg","r") as file:
+        svgfile = file.read()
+        file.close()
+        reformat = svgfile.split('\n')
+        reformat = reformat[1] + reformat[2] + reformat[3] #pull the specific lines
+        reformat = svgfile.split("#") #rewrite color code
+        global svgpins = []
+        for i in range(len(colors)):
+            if(colors[i] == "EMPTY"):
+                svgpins.append(reformat[0] + "#" + reformat[1])
+            else:
+                color = "#" + colors[i]
+                svgpins.append(reformat[0] + color + reformat[1][3:])
+        return 0
+    return -2
+  
+  
+reformat = svgfile.split('\n')
+reformat = reformat[1] + reformat[2] + reformat[3]
+reformat = svgfile.split("#")
+svgpins = []
+for i in range(len(colors)):
+    color = ""
+    if(colors[i] == "EMPTY"):
+        svgpins.append(reformat[0] + "#" + reformat[1])
+    else:
+        color = "#" + colors[i]
+    svgpins.append(reformat[0] + color + reformat[1][3:])
+print(svgpins)
 
+
+
+def getHeaderFormat():
+    with open("headerformat.txt", "r") as file: #basically a try catch loop
+        headerlist = file.read() #read headerformat text file
+        file.close()
+        headerlist = headerlist.split('\n')[0] #take first line only
+        split = headerlist.split(' ') #split by space
+        if(int(len(split[1]))!= int(split[0])): #check if the format is correct, else ask to reformat
+            print("Missing pin colors, add 'EMPTY' for a disconnected pin in the header")
+            return -1 #incorrect header format error case
+        global colors = split[1][1:(len(split[1])-1)].split(',') #colors list is set to the colors defined in the format file
+        global numPins = split[0] #numPins is the number of output pins necessary
+        return 0
+    return -2 #no file error case
 
  
 def updateSite():   
@@ -107,7 +161,7 @@ def setup(): #pin setup
         outputPins[i].value(0) #default value
     connectNetwork()
 
-def checkPinout():
+def checkPinout(numofPins):
     pinout = [[],[]]
     for i in range(len(outputPins)):
         pinout[0].append(i+1) #start building pinout array
