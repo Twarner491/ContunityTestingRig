@@ -6,16 +6,18 @@
 #todo
 #set up hardware button for launch site
 #set up html template
-#set up svg file template
-#write method to edit fill variable to svg and assign to variable
+#set up svg file template with text
 
 #add -1 case for getHeaderFormat (header file incorrectly formatted, push error to site)
 #add -2 case for getHeaderFormat (no file found, push error to site)
 #add returns 0 confirmation for getHeaderFormat
+
 #run checkPinout() differently based on numPins from headerformat
+
 #add -2 case for getSVGFormat (no format file found)
 #add returns 0 confirmation for getSVGFormat
-#<g> group header for adding text labels to svg pin objects
+
+#implement <g> group header to add text labels to svg pin objects
 #determine if header config file is necessary, do they want a specific config for each header type?
 
 import rp2
