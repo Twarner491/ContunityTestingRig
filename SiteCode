@@ -58,20 +58,7 @@ def getSVGFormat():
                 svgpins.append(reformat[0] + color + reformat[1][3:])
         return 0
     return -2
-  
-  
-reformat = svgfile.split('\n')
-reformat = reformat[1] + reformat[2] + reformat[3]
-reformat = svgfile.split("#")
-svgpins = []
-for i in range(len(colors)):
-    color = ""
-    if(colors[i] == "EMPTY"):
-        svgpins.append(reformat[0] + "#" + reformat[1])
-    else:
-        color = "#" + colors[i]
-    svgpins.append(reformat[0] + color + reformat[1][3:])
-print(svgpins)
+ 
 
 
 
