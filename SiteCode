@@ -28,8 +28,8 @@ import socket
 import network
 
 
-ssid = 'CLSLabs'
-password = 'clshawks'
+ssid = 'NETWORK NAME'
+password = 'NETWORK PASSWORD'
 
 
 
