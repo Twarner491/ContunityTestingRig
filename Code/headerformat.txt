@@ -1,0 +1,5 @@
+<3,4,4,2> <D00,FFF,140,EMPTY,000,DF0,EMPTY,D80,EMPTY,EMPTY,69F,E0E,EMPTY>
+
+This is the header format. Please format as follows:
+
+<npins row 1,row 2,row 3...,row x> <COLORPin1(3 Hex Number),COLORPin2,...,COLORPinx>
