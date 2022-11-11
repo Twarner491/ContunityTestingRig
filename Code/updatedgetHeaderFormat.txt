@@ -1,0 +1,18 @@
+def getHeaderFormat():
+    with open("headerformat.txt", "r") as file: #basically a try catch loop
+        headerlist = file.read() #read headerformat text file
+        file.close()
+        headerlist = headerlist.split('\n')[0] #take first line only
+        split = headerlist.split(' ') #split by space
+        global colors
+        colors = split[1][1:(len(split[1])-1)].split(',') #colors list is set to the colors defined in the format file
+        global numPins
+        numPins = split[0][1:(len(split[0])-1)].split(',')
+        numofpins = 0
+        for i in range(len(numPins)):
+            numofpins += int(numPins[i])
+        if(int(len(colors))!= numofpins): #check if the format is correct, else ask to reformat
+            print("Missing pin colors, add 'EMPTY' for a disconnected pin in the header")
+            return -1 #incorrect header format error case
+        return 0
+    return -2 #no file error case
