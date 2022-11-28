@@ -27,7 +27,6 @@ import rp2
 from machine import Pin
 import utime
 
-
 inPinNums = [3,4,5,6] #gpio input pins
 outPinNums = [7,8,9,10,11,12,13,14,15] #gpio output pins
 
@@ -41,8 +40,6 @@ for i in range(len(outPinNums)):
     outputPins.append(Pin(outPinNums[i], Pin.OUT))
     outputPins[i].value(0) #default value
     
-
-
 def checkPinout():
     r = "Pinout:"
     #String to return
@@ -81,7 +78,6 @@ def bin2num(a, b, c, d):
     #add the equivalent value of the bit (0 << 3 = 0, 1 << 3 = 1000 = 8)
     return z
     #return the equivalent pin value
-
 
 #STATIC SITE SETUP
 

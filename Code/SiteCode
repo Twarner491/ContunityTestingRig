@@ -2,7 +2,6 @@
 #https://www.raspberrypi.com/news/how-to-run-a-webserver-on-raspberry-pi-pico-w/
 #https://www.tomshardware.com/how-to/raspberry-pi-pico-w-web-server
 
-
 #todo
 #set up hardware button for launch site
 #set up html template
@@ -27,14 +26,10 @@ import utime
 import socket
 import network
 
-
 ssid = 'NETWORK NAME'
 password = 'NETWORK PASSWORD'
 
-
-
 bool hasBeenSetup = false
-
 
 setup()
 def main():
@@ -59,9 +54,6 @@ def getSVGFormat():
         return 0
     return -2
  
-
-
-
 def getHeaderFormat():
     with open("headerformat.txt", "r") as file: #basically a try catch loop
         headerlist = file.read() #read headerformat text file
@@ -76,7 +68,6 @@ def getHeaderFormat():
         return 0
     return -2 #no file error case
 
- 
 def updateSite():   
     page = open("index.html","r")
     html = page.read()
