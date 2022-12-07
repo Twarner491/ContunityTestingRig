@@ -132,6 +132,8 @@ def checkPinout(GPIOpins):
         r += "Pin " + str(i) + " --> Pin " + str(pin) + '\n' #build string equivalent to array (display purposes)
     return [r,pinout]
 
+
+
 def bin2num(a, b, c, d):
     z = a
     z += b << 1
@@ -146,13 +148,24 @@ def bin2num(a, b, c, d):
 
 #formatting functions
 
-def getHeaderFormat():
+def getHeaderFormat(headertype):
+    colorformat = [[],[]]
     colors = []
     numPins = []
     with open("headerformat.txt", "r") as file: #basically a try catch loop
         headerlist = file.read() #read headerformat text file
         file.close()
-        headerlist = headerlist.split('\n')[0] #take first line only
+        headerlist = headerlist.split('\n')
+        match headertype:
+            case "2":
+                headerlist = headerlist[0]
+            case "4":
+                headerlist = headerlist[1]
+            case "L":
+                headerlist = headerlist[2]
+            case _:
+                print("no file go work or header type bad")
+        headerlist = headerlist[2:]
         splitHeader = headerlist.split(' ') #split by space
         colors = splitHeader[1][1:(len(splitHeader[1])-1)].split(',') #colors list is set to the colors defined in the format file
         numPins = splitHeader[0][1:(len(splitHeader[0])-1)].split(',')
@@ -166,19 +179,17 @@ def getHeaderFormat():
     return -2 #no file error case
 
 def getSVGFormat(colorcodes):
-    scolors = colorcodes
-    with open("pin.svg","r") as file:
+    svgcolors = colorcodes
+    with open("13PinHeader.svg","r") as file:
         svgfile = file.read()
         file.close()
-        reformat = svgfile.split('\n')
-        reformat = reformat[1] + reformat[2] + reformat[3] #pull the specific lines
-        reformat = svgfile.split("#") #rewrite color code
-        svgpins = []
-        for i in range(len(scolors)):
-            if(scolors[i] == "EMPTY"):
-                svgpins.append(reformat[0] + "#" + reformat[1])
-            else:
-                color = "#" + scolors[i]
-                svgpins.append(reformat[0] + color + reformat[1][3:])
+        reformat = svgfile.split('fill="#000000"')
+        svgpins = ""
+        while len(reformat) > 1:
+            colorx = svgcolors.pop(0)
+            if(colorx == "EMPTY"):
+                colorx = "9BC"
+            svgpins += reformat.pop(0) + 'fill="#' + colorx + '"'
+        svgpins += reformat.pop()
         return svgpins
     return -2
