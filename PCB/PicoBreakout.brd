@@ -194,12 +194,11 @@
 <layer number="255" name="routoute" color="7" fill="1" visible="no" active="no"/>
 </layers>
 <board>
+<fusionsync huburn="a.cGVyc29uYWw6dWUyY2VjZDkz" projecturn="a.cGVyc29uYWw6dWUyY2VjZDkzIzIwMTkwMTAzMTY4MjEzNTA2" f3durn="urn:adsk.wipprod:dm.lineage:g2FzlmCfS4iXO2IOv7ZSYg" pcbguid="89c8c0a1-dd69-4ef4-b93a-1f64f55537e1" lastpulledtime="" lastsyncedchangeguid="" latestrevisionid="3ed4198d-4a7d-471d-a0de-3c94c9aa8158" lastsyncedrevisionid="3ed4198d-4a7d-471d-a0de-3c94c9aa8158" lastboardhashguid="849b84f2-fd19-473c-12fe-b8a419a203dc" lastpushedtime="2023-01-17T13:23:22Z" linktopcb3d="true"/>
 <plain>
 <text x="37.587415625" y="7.9738875" size="1.016" layer="27" rot="R90">100k</text>
 <text x="30.24874375" y="2.30908125" size="2" layer="27" font="vector">-</text>
 <text x="27.383096875" y="2.30908125" size="2" layer="27" font="vector">+</text>
-<wire x1="83.82" y1="2.54" x2="83.82" y2="54.61" width="0.127" layer="20"/>
-<wire x1="83.82" y1="54.61" x2="81.28" y2="57.15" width="0.127" layer="20" curve="90"/>
 <wire x1="81.28" y1="57.15" x2="8.672103125" y2="57.15" width="0.127" layer="20"/>
 <wire x1="8.672103125" y1="57.15" x2="6.87605" y2="56.40605" width="0.127" layer="20" curve="45.00005"/>
 <wire x1="6.87605" y1="56.40605" x2="2.01395" y2="51.54395" width="0.127" layer="20"/>
@@ -209,7 +208,25 @@
 <wire x1="2.01395" y1="5.60605" x2="6.87605" y2="0.74395" width="0.127" layer="20"/>
 <wire x1="6.87605" y1="0.74395" x2="8.672103125" y2="0" width="0.127" layer="20" curve="45.00007"/>
 <wire x1="8.672103125" y1="0" x2="81.28" y2="0" width="0.127" layer="20"/>
-<wire x1="81.28" y1="0" x2="83.82" y2="2.54" width="0.127" layer="20" curve="90"/>
+<hole x="15.071340625" y="54.229565625" drill="3"/>
+<hole x="17.30965625" y="3.510728125" drill="3"/>
+<hole x="86.20316875" y="53.934209375" drill="3"/>
+<hole x="86.24433125" y="3.274575" drill="3"/>
+<wire x1="81.28" y1="0" x2="87.884" y2="0" width="0.2032" layer="20"/>
+<wire x1="87.884" y1="0" x2="90.17" y2="2.286" width="0.2032" layer="20" curve="90"/>
+<wire x1="90.17" y1="2.286" x2="90.17" y2="4.50289375" width="0.2032" layer="20"/>
+<wire x1="90.17" y1="4.50289375" x2="88.32289375" y2="6.35" width="0.2032" layer="20" curve="90"/>
+<wire x1="88.32289375" y1="6.35" x2="86.706446875" y2="7.019553125" width="0.2032" layer="20" curve="-45"/>
+<wire x1="86.706446875" y1="7.019553125" x2="85.759553125" y2="7.966446875" width="0.2032" layer="20"/>
+<wire x1="85.759553125" y1="7.966446875" x2="85.09" y2="9.58289375" width="0.2032" layer="20" curve="-45"/>
+<wire x1="85.09" y1="9.58289375" x2="85.09" y2="47.56710625" width="0.2032" layer="20"/>
+<wire x1="85.09" y1="47.56710625" x2="85.759553125" y2="49.183553125" width="0.2032" layer="20" curve="-45"/>
+<wire x1="85.759553125" y1="49.183553125" x2="86.706446875" y2="50.130446875" width="0.2032" layer="20"/>
+<wire x1="86.706446875" y1="50.130446875" x2="88.32289375" y2="50.8" width="0.2032" layer="20" curve="-45"/>
+<wire x1="88.32289375" y1="50.8" x2="90.17" y2="52.64710625" width="0.2032" layer="20" curve="90"/>
+<wire x1="90.17" y1="52.64710625" x2="90.17" y2="54.864" width="0.2032" layer="20"/>
+<wire x1="90.17" y1="54.864" x2="87.884" y2="57.15" width="0.2032" layer="20" curve="90"/>
+<wire x1="87.884" y1="57.15" x2="81.28" y2="57.15" width="0.2032" layer="20"/>
 </plain>
 <libraries>
 <library name="eagle_fab">
@@ -3248,4 +3265,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </errors>
 </board>
 </drawing>
+<compatibility>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports Fusion synchronisation.
+This feature will not be available in this version and saving
+the document will break the link to the Fusion PCB feature.
+</note>
+</compatibility>
 </eagle>
