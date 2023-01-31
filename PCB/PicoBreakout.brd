@@ -194,7 +194,7 @@
 <layer number="255" name="routoute" color="7" fill="1" visible="no" active="no"/>
 </layers>
 <board>
-<fusionsync huburn="a.cGVyc29uYWw6dWUyY2VjZDkz" projecturn="a.cGVyc29uYWw6dWUyY2VjZDkzIzIwMTkwMTAzMTY4MjEzNTA2" f3durn="urn:adsk.wipprod:dm.lineage:g2FzlmCfS4iXO2IOv7ZSYg" pcbguid="89c8c0a1-dd69-4ef4-b93a-1f64f55537e1" lastpulledtime="" lastsyncedchangeguid="" latestrevisionid="3ed4198d-4a7d-471d-a0de-3c94c9aa8158" lastsyncedrevisionid="3ed4198d-4a7d-471d-a0de-3c94c9aa8158" lastboardhashguid="849b84f2-fd19-473c-12fe-b8a419a203dc" lastpushedtime="2023-01-17T13:23:22Z" linktopcb3d="true"/>
+<fusionsync huburn="a.cGVyc29uYWw6dWUyY2VjZDkz" projecturn="a.cGVyc29uYWw6dWUyY2VjZDkzIzIwMTkwMTAzMTY4MjEzNTA2" f3durn="urn:adsk.wipprod:dm.lineage:g2FzlmCfS4iXO2IOv7ZSYg" pcbguid="" lastpulledtime="" lastsyncedchangeguid="" latestrevisionid="3ed4198d-4a7d-471d-a0de-3c94c9aa8158" lastsyncedrevisionid="3ed4198d-4a7d-471d-a0de-3c94c9aa8158" lastboardhashguid="849b84f2-fd19-473c-12fe-b8a419a203dc" lastpushedtime="2023-01-17T13:23:22Z" linktopcb3d="false"/>
 <plain>
 <text x="37.587415625" y="7.9738875" size="1.016" layer="27" rot="R90">100k</text>
 <text x="30.24874375" y="2.30908125" size="2" layer="27" font="vector">-</text>
@@ -2851,10 +2851,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <contactref element="X1" pad="GP22"/>
 <contactref element="JP1" pad="7"/>
 <wire x1="58.495415625" y1="25.6468875" x2="62.7181625" y2="25.6468875" width="0.4572" layer="1"/>
-<wire x1="66.454171875" y1="29.382896875" x2="66.454171875" y2="41.8084375" width="0.4572" layer="1"/>
+<wire x1="67.066525" y1="29.99525" x2="67.066525" y2="42.420790625" width="0.4572" layer="1"/>
 <wire x1="77.485671875" y1="45.69934375" x2="70.345078125" y2="45.69934375" width="0.4572" layer="1"/>
-<wire x1="70.345078125" y1="45.69934375" x2="66.454171875" y2="41.8084375" width="0.4572" layer="1"/>
-<wire x1="62.7181625" y1="25.6468875" x2="66.454171875" y2="29.382896875" width="0.4572" layer="1"/>
+<wire x1="70.345078125" y1="45.69934375" x2="67.066525" y2="42.420790625" width="0.4572" layer="1"/>
+<wire x1="62.7181625" y1="25.6468875" x2="67.066525" y2="29.99525" width="0.4572" layer="1"/>
 </signal>
 <signal name="N$28">
 <contactref element="X1" pad="GP21"/>
@@ -3251,6 +3251,18 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="57.957434375" y1="3.830665625" x2="70.5193" y2="3.830665625" width="0.4572" layer="16"/>
 <wire x1="70.5193" y1="3.830665625" x2="75.59078125" y2="8.902146875" width="0.4572" layer="16"/>
 <wire x1="75.59078125" y1="8.902146875" x2="78.912853125" y2="8.902146875" width="0.4572" layer="16"/>
+</signal>
+<signal name="N$64">
+<contactref element="X1" pad="RUN"/>
+<contactref element="JP1" pad="20"/>
+<wire x1="58.495415625" y1="28.1868875" x2="62.302409375" y2="28.1868875" width="0.4572" layer="1"/>
+<wire x1="62.302409375" y1="28.1868875" x2="65.9900875" y2="31.874565625" width="0.4572" layer="1"/>
+<wire x1="65.9900875" y1="31.874565625" x2="65.9900875" y2="43.0162375" width="0.4572" layer="1"/>
+<wire x1="65.9900875" y1="43.0162375" x2="69.924359375" y2="46.950509375" width="0.4572" layer="1"/>
+<wire x1="81.041940625" y1="46.950509375" x2="81.839234375" y2="46.153215625" width="0.4572" layer="1"/>
+<wire x1="81.839234375" y1="46.153215625" x2="81.839234375" y2="32.27290625" width="0.4572" layer="1"/>
+<wire x1="81.839234375" y1="32.27290625" x2="80.025671875" y2="30.45934375" width="0.4572" layer="1"/>
+<wire x1="69.924359375" y1="46.950509375" x2="81.041940625" y2="46.950509375" width="0.4572" layer="1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
