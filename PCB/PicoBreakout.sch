@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.000000123031" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -3099,6 +3099,17 @@ part number 2062-2P from STA</description>
 <pinref part="X1" gate="G$1" pin="GP13"/>
 <wire x1="137.16" y1="-5.08" x2="119.38" y2="-5.08" width="0.1524" layer="91"/>
 <pinref part="JP1" gate="A" pin="37"/>
+</segment>
+</net>
+<net name="N$64" class="0">
+<segment>
+<pinref part="JP1" gate="A" pin="20"/>
+<wire x1="144.78" y1="17.78" x2="150.36685625" y2="17.816978125" width="0.1524" layer="91"/>
+<wire x1="150.36685625" y1="17.816978125" x2="150.48873125" y2="44.744853125" width="0.1524" layer="91"/>
+<wire x1="150.48873125" y1="44.744853125" x2="113.03968125" y2="44.8058" width="0.1524" layer="91"/>
+<wire x1="113.03968125" y1="44.8058" x2="112.91780625" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="X1" gate="G$1" pin="RUN"/>
+<wire x1="112.91780625" y1="30.48" x2="106.68" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
