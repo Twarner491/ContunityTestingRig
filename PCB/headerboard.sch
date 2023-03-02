@@ -1248,6 +1248,117 @@ In this library the device names are the same as the pin names of the symbols, t
 </deviceset>
 </devicesets>
 </library>
+<library name="eagle_fab">
+<packages>
+<package name="LED1206">
+<description>LED 1206 pads (standard pattern)</description>
+<wire x1="0.9525" y1="-0.8128" x2="-0.9652" y2="-0.8128" width="0.1524" layer="51"/>
+<wire x1="0.9525" y1="0.8128" x2="-0.9652" y2="0.8128" width="0.1524" layer="51"/>
+<wire x1="-2.473" y1="0.983" x2="2.473" y2="0.983" width="0.0508" layer="39"/>
+<wire x1="2.473" y1="0.983" x2="2.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="2.473" y1="-0.983" x2="-2.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="-2.473" y1="-0.983" x2="-2.473" y2="0.983" width="0.0508" layer="39"/>
+<smd name="2" x="1.422" y="0" dx="1.6" dy="1.803" layer="1"/>
+<smd name="1" x="-1.422" y="0" dx="1.6" dy="1.803" layer="1"/>
+<text x="-1.27" y="1.27" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.27" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.6891" y1="-0.8763" x2="-0.9525" y2="0.8763" layer="51"/>
+<rectangle x1="0.9525" y1="-0.8763" x2="1.6891" y2="0.8763" layer="51"/>
+</package>
+<package name="LED1206FAB">
+<description>LED1206 FAB style (smaller pads to allow trace between)</description>
+<wire x1="-2.032" y1="1.016" x2="2.032" y2="1.016" width="0.127" layer="21"/>
+<wire x1="2.032" y1="1.016" x2="2.032" y2="-1.016" width="0.127" layer="21"/>
+<wire x1="2.032" y1="-1.016" x2="-2.032" y2="-1.016" width="0.127" layer="21"/>
+<wire x1="-2.032" y1="-1.016" x2="-2.032" y2="1.016" width="0.127" layer="21"/>
+<smd name="1" x="-1.651" y="0" dx="1.27" dy="1.905" layer="1"/>
+<smd name="2" x="1.651" y="0" dx="1.27" dy="1.905" layer="1"/>
+<text x="-1.778" y="1.27" size="1.016" layer="25" ratio="15">&gt;NAME</text>
+<text x="-1.778" y="-2.286" size="1.016" layer="27" ratio="15">&gt;VALUE</text>
+</package>
+<package name="5MM">
+<description>5mm round through hole part.</description>
+<wire x1="2.54" y1="-1.905" x2="2.54" y2="1.905" width="0.2032" layer="21"/>
+<wire x1="2.54" y1="-1.905" x2="2.54" y2="1.905" width="0.254" layer="21" curve="-286.260205" cap="flat"/>
+<wire x1="-1.143" y1="0" x2="0" y2="1.143" width="0.1524" layer="51" curve="-90" cap="flat"/>
+<wire x1="0" y1="-1.143" x2="1.143" y2="0" width="0.1524" layer="51" curve="90" cap="flat"/>
+<wire x1="-1.651" y1="0" x2="0" y2="1.651" width="0.1524" layer="51" curve="-90" cap="flat"/>
+<wire x1="0" y1="-1.651" x2="1.651" y2="0" width="0.1524" layer="51" curve="90" cap="flat"/>
+<wire x1="-2.159" y1="0" x2="0" y2="2.159" width="0.1524" layer="51" curve="-90" cap="flat"/>
+<wire x1="0" y1="-2.159" x2="2.159" y2="0" width="0.1524" layer="51" curve="90" cap="flat"/>
+<circle x="0" y="0" radius="2.54" width="0.1524" layer="21"/>
+<pad name="IN" x="-1.27" y="0" drill="0.8128" diameter="1.4224"/>
+<pad name="OUT" x="1.27" y="0" drill="0.8128" diameter="1.4224"/>
+<text x="3.175" y="0.5334" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="3.2004" y="-1.8034" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="LED">
+<description>LED</description>
+<wire x1="1.27" y1="2.54" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="2.54" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="1.27" y1="2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="-1.27" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.032" y1="1.778" x2="-3.429" y2="0.381" width="0.1524" layer="94"/>
+<wire x1="-1.905" y1="0.635" x2="-3.302" y2="-0.762" width="0.1524" layer="94"/>
+<text x="3.556" y="-2.032" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+<text x="5.715" y="-2.032" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="C" x="0" y="-2.54" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="A" x="0" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
+<polygon width="0.1524" layer="94">
+<vertex x="-3.429" y="0.381"/>
+<vertex x="-3.048" y="1.27"/>
+<vertex x="-2.54" y="0.762"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="-3.302" y="-0.762"/>
+<vertex x="-2.921" y="0.127"/>
+<vertex x="-2.413" y="-0.381"/>
+</polygon>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="LED">
+<description>LED</description>
+<gates>
+<gate name="G$1" symbol="LED" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="LED1206">
+<connects>
+<connect gate="G$1" pin="A" pad="1"/>
+<connect gate="G$1" pin="C" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="FAB1206" package="LED1206FAB">
+<connects>
+<connect gate="G$1" pin="A" pad="1"/>
+<connect gate="G$1" pin="C" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="5MM" package="5MM">
+<connects>
+<connect gate="G$1" pin="A" pad="IN"/>
+<connect gate="G$1" pin="C" pad="OUT"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1285,6 +1396,9 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="4-6" library="fab_new" deviceset="CONN_03_TERM" device="'-FABLAB'"/>
 <part name="7-9" library="fab_new" deviceset="CONN_03_TERM" device="'-FABLAB'"/>
 <part name="U$19" library="ContunityTestingRig" deviceset="13PINHEADER" device=""/>
+<part name="U$1" library="eagle_fab" deviceset="LED" device=""/>
+<part name="SUPPLY4" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="R2" library="fab_new" deviceset="R" device="1206FAB" value="330ohm"/>
 </parts>
 <sheets>
 <sheet>
@@ -1347,6 +1461,17 @@ In this library the device names are the same as the pin names of the symbols, t
 <attribute name="NAME" x="45.085" y="75.565" size="1.778" layer="95" rot="R90"/>
 </instance>
 <instance part="U$19" gate="G$1" x="78.74" y="152.4" smashed="yes"/>
+<instance part="U$1" gate="G$1" x="96.52" y="99.06" smashed="yes">
+<attribute name="NAME" x="100.076" y="97.028" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="102.235" y="97.028" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="SUPPLY4" gate="GND" x="96.52" y="93.98" smashed="yes">
+<attribute name="VALUE" x="94.615" y="90.805" size="1.778" layer="96"/>
+</instance>
+<instance part="R2" gate="G$1" x="86.36" y="93.98" smashed="yes">
+<attribute name="NAME" x="82.55" y="95.4786" size="1.778" layer="95"/>
+<attribute name="VALUE" x="82.55" y="90.678" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -1540,6 +1665,10 @@ In this library the device names are the same as the pin names of the symbols, t
 <segment>
 <pinref part="SUPPLY3" gate="GND" pin="GND"/>
 <pinref part="U$2" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<pinref part="SUPPLY4" gate="GND" pin="GND"/>
+<pinref part="U$1" gate="G$1" pin="C"/>
 </segment>
 </net>
 <net name="N$16" class="0">
@@ -1845,6 +1974,22 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="165.735" y1="75.565" x2="73.66" y2="75.565" width="0.1524" layer="91"/>
 <pinref part="JP1" gate="A" pin="31"/>
 <wire x1="73.66" y1="75.565" x2="73.66" y2="104.14" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$29" class="0">
+<segment>
+<wire x1="91.44" y1="93.98" x2="91.44" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="A"/>
+<wire x1="91.44" y1="104.14" x2="96.52" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="R2" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="N$28" class="0">
+<segment>
+<pinref part="JP1" gate="A" pin="33"/>
+<wire x1="76.2" y1="104.14" x2="76.2" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="R2" gate="G$1" pin="1"/>
+<wire x1="76.2" y1="93.98" x2="81.28" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
