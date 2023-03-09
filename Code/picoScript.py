@@ -14,8 +14,8 @@ import socket
 import network
 
 
-ssid = 'ATTdWyTMkI'
-password = 'wwtqe#2dak6a'
+ssid = 'CLSLabs'
+password = 'clshawks'
 
 
 inPinNums = [3,4,5,6]
@@ -36,18 +36,33 @@ ledPin = Pin(11,Pin.OUT)
 
 
 def getSVGFormat(pinout):
-    colors = ["01B","0D2","1FF","800","C80","CF0","E0F","652","326"]
-    svgfile = '<svg width="170" height="170" viewBox="0 0 175 175"><rect x="20" y="0" width="35" height="35" fill="#000"/><rect x="65" y="0" width="35" height="35" fill="#000"/><rect x="110" y="0" width="35" height="35" fill="#000"/><rect x="0" y="45" width="35" height="35" fill="#000"/><rect x="45" y="45" width="35" height="35" fill="#000"/><rect x="90" y="45" width="35" height="35" fill="#000"/><rect x="135" y="45" width="35" height="35" fill="#000"/><rect x="0" y="90" width="35" height="35" fill="#000"/><rect x="45" y="90" width="35" height="35" fill="#000"/><rect x="90" y="90" width="35" height="35" fill="#000"/><rect x="135" y="90" width="35" height="35" fill="#000"/><rect x="45" y="135" width="35" height="35" fill="#000"/><rect x="90" y="135" width="35" height="35" fill="#000"/></svg>'
+    pinoutArray = [[],[]]
+    for i in range(len(pinout[1])):
+        lowVal = pinout[1][0]
+        lowIndex = 0
+        for j in range(len(pinout[1])):
+            if(pinout[1][j] < lowVal and pinout[1][j] != 0):
+                lowVal = pinout[1][j]
+                lowIndex = j
+        pinoutArray[0].append(pinout[0][lowIndex])
+        pinoutArray[1].append(pinout[1][lowIndex])
+        pinout[0].pop(lowIndex)
+        pinout[1].pop(lowIndex)
+    pinout = pinoutArray
+    colors = ["e3342f","f6993f","ffed4a","38c172","4dc0b5","3490dc","6574cd","9561e2","f66d9b"]
+    svgfile = '<svg width="250" height="250" viewBox="0 0 175 175"><rect x="20" y="0" width="35" height="35" fill="#000"/><rect x="65" y="0" width="35" height="35" fill="#000"/><rect x="110" y="0" width="35" height="35" fill="#000"/><rect x="0" y="45" width="35" height="35" fill="#000"/><rect x="45" y="45" width="35" height="35" fill="#000"/><rect x="90" y="45" width="35" height="35" fill="#000"/><rect x="135" y="45" width="35" height="35" fill="#000"/><rect x="0" y="90" width="35" height="35" fill="#000"/><rect x="45" y="90" width="35" height="35" fill="#000"/><rect x="90" y="90" width="35" height="35" fill="#000"/><rect x="135" y="90" width="35" height="35" fill="#000"/><rect x="45" y="135" width="35" height="35" fill="#000"/><rect x="90" y="135" width="35" height="35" fill="#000"/></svg>'
     reformat = svgfile.split('fill="#000"')
     finalSVG = ""
-    colorindex = 0
-    for i in range(len(reformat)-1):
+    pinindex = 0
+    for i in range(13):
         finalSVG += reformat[i]
-        if(pinout[1][i] == 0):
-            finalSVG += 'fill="#000"'
-        else:
-            finalSVG += 'fill ="#' + colors[colorindex] + '"'
-            colorindex += 1
+        found = False
+        for j in range(9):
+            if(pinout[1][j] == (i + 1)):
+                found = True
+                finalSVG += 'fill ="#' + colors[pinout[0][j]-1] + '"'
+        if(not found):
+            finalSVG += 'fill ="#212124"'
     finalSVG += reformat[-1]
     return finalSVG
 
@@ -85,8 +100,8 @@ def updateSite():
             stringrows += rows[i]
         splitresponse = response.split('<!-- Split Spot 1 -->')
         response = splitresponse[0] + stringrows + splitresponse[1]
-   #     splitresponse = response.split('<!-- Split Spot 2 -->')
-    #    response = splitresponse[0] + getSVGFormat(checkPinout()) + splitrepsonse[1]
+        splitresponse = response.split('<!-- Split Spot 2 -->')
+        response = splitresponse[0] + getSVGFormat(checkPinout()) + splitresponse[1]
         #for i in range(len(svgs)):
          #   response += svgs[i]
         cl.send('HTTP/1.0 200 OK\r\nContent-type: text/html\r\n\r\n')

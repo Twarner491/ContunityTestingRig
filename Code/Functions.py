@@ -1,3 +1,10 @@
+#(c) Drew Griggs & Teddy Warner - (2023)
+
+#This work may be reproduced, modified, distributed, performed, and displayed
+#for any purpose, but must acknowledge Teddy Warner.
+#Copyright is retained and must be preserved. The work is provided as is;
+#no warranty is provided, and users accept all liability.
+
 import sys
 import rp2
 from machine import Pin

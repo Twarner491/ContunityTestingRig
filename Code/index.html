@@ -1,9 +1,114 @@
+<!--
+(c) Drew Griggs & Teddy Warner - (2023)
+
+This work may be reproduced, modified, distributed, performed, and displayed
+for any purpose, but must acknowledge Teddy Warner.
+Copyright is retained and must be preserved. The work is provided as is;
+no warranty is provided, and users accept all liability.
+-->
+
 <!DOCTYPE html>
 <html>
-    <head> <title>Header Pinout<title> </head>
-    <body> <h1>Pin Header Pinout</h1> </title>
-<svg width="100" height="100">
-  <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
-</svg>
-</body>
+    <head> 
+        <meta charset="utf-8" />
+        <title>Continuity Testing Rig</title> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            setTimeout(function() {
+                $("#pindata").load("index.html" + '#pindata');
+            }, 5000);
+        </script>
+        <style>
+            body {
+                background-color: #FAFAFA;
+            }
+            .window {
+                width: 850px;
+                height: 550px;
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: white;
+                border: 2px solid black;
+                border-radius: 5px;
+                box-shadow: 6px 6px 2px #ECECEC;
+                padding: 10px;
+            }
+            .pinoutparent {
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translate(0%, -50%);
+                width: 200px;
+                height: 516px;
+                padding: 10px;
+                border-radius: 5px;
+                background-color: #212124;
+                color: white;
+                font-family: "Lucida Console", "Courier New", monospace;
+                z-index: -1;
+            }
+            .pinouttext {
+                text-align: center;
+            }
+            .pinoutprint {
+                font-size: 1.2em;
+                color: white;
+            }
+            .logo {
+                position: absolute;
+                left: 390px;
+                top: 26px;
+            }
+            .ninePin {
+                position: absolute;
+                top: 55%;
+                left: 55px;
+                transform: translate(0%, -50%);
+            }
+            .thirteenPin {
+                position: absolute;
+                top: 55%;
+                left: 348px;
+                transform: translate(0%, -50%);
+            }
+            .footer {
+                position: absolute;
+                left: 10px;
+                bottom: 10px;
+                color: blue;
+                font-family: "Lucida Console", "Courier New", monospace;
+                font-size: 0.9em;
+            }
+        </style>
+    </head>
+    <body> 
+        <div id="pindata" class="window">
+            <div class="logo">
+                <img alt="Continuity Testing Rig" style="border-width:0; width: 240px;" src="https://github.com/Twarner491/ContunityTestingRig/raw/38e20d53577a565eb50ec9f776e9d31bad446085/assets/logo.png"/>
+            </div>
+            <div class="ninePin">
+                <svg width="250" height="250" viewBox="0 0 175 175"><rect x="0" y="0" width="50" height="50" fill="#e3342f"/><rect x="60" y="0" width="50" height="50" fill="#f6993f"/><rect x="120" y="0" width="50" height="50" fill="#ffed4a"/><rect x="0" y="60" width="50" height="50" fill="#38c172"/><rect x="60" y="60" width="50" height="50" fill="#4dc0b5"/><rect x="120" y="60" width="50" height="50" fill="#3490dc"/><rect x="0" y="120" width="50" height="50" fill="#6574cd"/><rect x="60" y="120" width="50" height="50" fill="#9561e2"/><rect x="120" y="120" width="50" height="50" fill="#f66d9b"/></svg>
+           </div>
+            <div class="thirteenPin">
+                <!-- Split Spot 2 -->
+            </div>
+            <div class="footer">   
+                <a href="https://github.com/Twarner491/ContunityTestingRig">ReadMe</a>
+                </br>
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+            </div>
+            <div class="pinoutparent">
+                <center>
+                    <h2 class="pinoutheader">Printed Pinout</h2>
+                </center>
+                <div class="pinouttext">
+                    <!-- Split Spot 1 -->
+                </div>
+            </div>
+        </div>
+        
+    </body>
 </html>
