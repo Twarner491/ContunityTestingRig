@@ -1,4 +1,4 @@
-![](../assets/logo.png)
+![](https://github.com/Twarner491/ContunityTestingRig/blob/main/assets/logo.png)
 
 ### Devoloped by [Drew Griggs](http://fabacademy.org/2021/labs/charlotte/students/drew-griggs/about/) and [Teddy Warner](https://teddywarner.org/About-Me/about/).
 
@@ -58,11 +58,11 @@ The operation of the Pico makes designing and editing a webpage in real time ver
 
 ### Testing
 
-![](../assets/ContTestWorking.mp4)
+![](https://raw.githubusercontent.com/Twarner491/ContunityTestingRig/main/assets/ContTestWorking.mp4)
 
 ![](https://lh5.googleusercontent.com/0GVkfh_DIdbBJlL_fOxFQUjcdMgFYwVumCB7ItI6uI0POPO9G1cycs-ywQQY8XpH_Hcj7f5Dsf_8AparOaUCarbp74y6nYTkM4nmMRn2sDrcxOtlcUwAbor1zFeUYJ7RAG4Sx1jPplNZ7YllzcWxy2Csjg=s2048)
 
-![](../assets/FinalConTestRig.mov)
+![](https://raw.githubusercontent.com/Twarner491/ContunityTestingRig/main/assets/FinalConTestRig.mov)
 
 ### Assembly Instructions
 
