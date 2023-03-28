@@ -21,12 +21,28 @@
 
 ### CAD
 
-### Fabrication & Testing
+<center>
+  <iframe src="https://myhub.autodesk360.com/ue2cecd93/shares/public/SHd38bfQT1fb47330c994f63a234ce036316?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+</center>
+
+### Fabrication
+
+![](https://lh5.googleusercontent.com/kFsb-2NWB4RrJoKmtjeXt-PreS5i-sQ2bQCFDOruiq-jtHDpG_Z6XJ0ir_d24_QZrsJ-7TkmencPa9_vlqqZAzTCAU772oLlCkLNxw-JLf7dofHnpeOOm8iJ0pOaiPgjXX6owQ-0ioM_506wBRP2KQ1cIQ=s2048)
 
 ![](https://lh3.googleusercontent.com/x_ro7CsahOadsJbF1w1ZxfbA1ggoqdXlvRRPE3gA1HOWYEJaqBrJqQR8slWjMgKZTTaHNVaLgjtCeXafzxeHIXaDEvZcixgWEX452i_vOWZI-1ibWAx4t74WkfFI9jrZTaWz9TwENvxyQjj1oesE-rskhA=s2048)
-![](https://lh5.googleusercontent.com/kFsb-2NWB4RrJoKmtjeXt-PreS5i-sQ2bQCFDOruiq-jtHDpG_Z6XJ0ir_d24_QZrsJ-7TkmencPa9_vlqqZAzTCAU772oLlCkLNxw-JLf7dofHnpeOOm8iJ0pOaiPgjXX6owQ-0ioM_506wBRP2KQ1cIQ=s2048)
 ![](https://lh6.googleusercontent.com/DG9NRtf-88ZE2CXPEN0UKcwDeB5yQB0cUZuaeV2iXd68y7zigl_WzmBxNh2X9yYc7kZbgdxdv2yo9_jLPdiqHHCTfaA_UK9LrXGn9R1cXq6y1r4FA6AO40wjzzFOAzAAZjXz58HgjZxD0jzpAQgNX7v87w=s2048) 
+
+### Testing
+
+<center>
+  <iframe src="https://drive.google.com/file/d/1-8SdHFbJWwZo3PdAqSQhobafjMDzkHrN/preview" width="640" height="480" allow="autoplay"></iframe>
+</center>
+
 ![](https://lh5.googleusercontent.com/0GVkfh_DIdbBJlL_fOxFQUjcdMgFYwVumCB7ItI6uI0POPO9G1cycs-ywQQY8XpH_Hcj7f5Dsf_8AparOaUCarbp74y6nYTkM4nmMRn2sDrcxOtlcUwAbor1zFeUYJ7RAG4Sx1jPplNZ7YllzcWxy2Csjg=s2048)
+
+</center>
+  <iframe src="https://drive.google.com/file/d/1IFGfkquGhxVC8qhPtiRgsiUKoAk7Me7d/preview" width="640" height="480" allow="autoplay"></iframe>
+</center>
 
 ## Sources -
  - [https://www.tomshardware.com/how-to/raspberry-pi-pico-setup](https://www.tomshardware.com/how-to/raspberry-pi-pico-setup)
