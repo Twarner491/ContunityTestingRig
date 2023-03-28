@@ -40,9 +40,7 @@
 
 ![](https://lh5.googleusercontent.com/0GVkfh_DIdbBJlL_fOxFQUjcdMgFYwVumCB7ItI6uI0POPO9G1cycs-ywQQY8XpH_Hcj7f5Dsf_8AparOaUCarbp74y6nYTkM4nmMRn2sDrcxOtlcUwAbor1zFeUYJ7RAG4Sx1jPplNZ7YllzcWxy2Csjg=s2048)
 
-</center>
-  <iframe src="https://drive.google.com/file/d/1IFGfkquGhxVC8qhPtiRgsiUKoAk7Me7d/preview" width="640" height="480" allow="autoplay"></iframe>
-</center>
+![](https://drive.google.com/file/d/1IFGfkquGhxVC8qhPtiRgsiUKoAk7Me7d/preview")
 
 ## Sources -
  - [https://www.tomshardware.com/how-to/raspberry-pi-pico-setup](https://www.tomshardware.com/how-to/raspberry-pi-pico-setup)
