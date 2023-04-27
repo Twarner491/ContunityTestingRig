@@ -2,8 +2,6 @@
 
 ### Devoloped by [Drew Griggs](http://fabacademy.org/2021/labs/charlotte/students/drew-griggs/about/) and [Teddy Warner](https://teddywarner.org/About-Me/about/).
 
-![Progress](https://img.shields.io/badge/progress-pending%20completion-yellow?style=flat-square)
-
 ## Documentation -
 
 Our project idea, as discussed with RhythmLink, is a continuity testing rig. This project will be capable of testing and displaying the results of the pinout connections between two ends of a cable with different headers. Our goal is to create a continuity testing rig capable of testing and displaying the connections between the ends of two different cable headers. We will display the results to a webpage using the Raspberry Pico W microcontroller.
