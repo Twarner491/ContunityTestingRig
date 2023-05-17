@@ -16,7 +16,6 @@ Through the development of the project, we learned a great deal about the princi
 
 Some of the major issues we encountered were due to errors in the board design. Due to an oversight in the main board, we did not include diodes for the final point of connection between each diode chain and output pin, which caused issues with reading pins that should not be high. Furthermore, we had an issue with our self test function. We initially decided to implement transistors to toggle and check each output and input pin, but due to voltage jumping between Gate and Drain despite no Source voltage, this part was unsuccessful. As such, we will not be making any further changes to the prototype, other than implementing a basic self test function with a predetermined cable.
 
-Throughout this project, we learned about our strengths and weaknesses in engineering. For example, due to his stuck up nature, Teddy refused to simplify our board designs by adding components to the bottom layer. At least he’s pretty good at making things look pretty. Drew, on the other hand, has no weaknesses, and is good at everything. Except for trying to write HTML. And CAD. Overall, we filled each other’s respective weaknesses, ultimately completing a visually attractive design.
 
 ### Electronic Design
 
