@@ -24,11 +24,10 @@ The testing rig will likely consist of two separate boards, one main logic and i
 We used a few methods to allow the project to be operable on the Raspberry Pico. We designed and implemented an array of diodes to convert any individual input into a binary representation of its pin value, allowing us to test and read 15 possible different wires through 4 input pins. For the header connector board, we designed custom eagle footprints and libraries for the two types of connectors, as well as adding self-test circuits that will connect pins through the switch of a transistor.
 
 <img src="./assets/Breakout_sch.png" width="300" />
-![Breakout_sch](https://github.com/user-attachments/assets/05594324-8c52-4d4d-940a-5015e21fb2b6)
-![Breakout_brd](https://github.com/user-attachments/assets/df76eae6-304d-48cf-88b6-c798345f3247)
+<img src="./assets/Breakout_brd.png" width="300" />
 
-![Header_sch](https://github.com/user-attachments/assets/e8bdf2f5-89b5-49f2-be88-a63eae7b841a)
-![Header_brd](https://github.com/user-attachments/assets/64e31092-856b-4154-8d6e-9a665f7c077d)
+<img src="./assets/Header_sch.png" width="300" />
+<img src="./assets/Header_brd.png" width="300" />
 
 Our project went somewhat to plan. Due to some issues in the testing of our board due to the precision of our lab’s PCB mills as well as the complexity of our board, we had some issues testing the main board. We eventually fixed a bug in the diode array, and the main board was working. The header board took less time, as it was less complex, but due to some issues with voltages jumping across transistors despite no source voltage, we were unable to include our initially planned self test function. After discussions with Rhythmlink, however, we determined that this would not be an issue, and since the board worked without the transistors soldered, we continued with testing. Web and software design and testing took the majority of our allocated time, as this was the first project of this type for both of us, so it took some getting used to programming a web server through micropython.
 
