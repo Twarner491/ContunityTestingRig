@@ -51,12 +51,12 @@ The operation of the Pico makes designing and editing a webpage in real time ver
 
 ### Testing
 
-<video controls="controls" width="800" height="600" name="Early Iteration">
-  <source src="./assets/ContTestWorking.mp4">
+<video width="800" controls>
+  <source src="./assets/ContTestWorking.mp4" type="video/mp4">
 </video>
 
-<video controls="controls" width="800" height="600" name="Final Test">
-  <source src="./assets/FinalConTestRig.mov">
+<video width="800" controls>
+  <source src="./assets/FinalConTestRig.mov" type="video/mov">
 </video>
 
 ### Assembly Instructions
