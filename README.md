@@ -52,7 +52,7 @@ The operation of the Pico makes designing and editing a webpage in real time ver
 ### Testing
 
 <video width="800" controls>
-  <source src="./assets/ContTestWorking.mp4" type="video/mp4">
+  <source src="https://github.com/Twarner491/ContunityTestingRig/blob/main/assets/ContTestWorking.mp4" type="video/mp4">
 </video>
 
 <video width="800" controls>
