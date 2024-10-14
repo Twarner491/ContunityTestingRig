@@ -38,8 +38,8 @@ We mostly used tools oriented to PCB design in our project. We spent the majorit
 The operation of the Pico makes designing and editing a webpage in real time very annoying. It requires a string object to be sent through a library in the Pico, so we had to code a way to implement the updates of the test through splicing strings together. Apart from some hiccups in the testing of this component, however, the code was fairly simple. It loops through each of nine output pins, and reads the corresponding binary value of the input pins that corresponds to the pin number in the header cable.
 
 <img src="./assets/GPIO.png" width="500" />
-<img src="./assets/getSVGFormat.png" width="500" />
-<img src="./assets/updateSite.png" width="500" />
+<img src="./assets/getSVGFormat.png" width="700" />
+<img src="./assets/updateSite.png" width="700" />
 
 
 ### CAD
@@ -51,11 +51,13 @@ The operation of the Pico makes designing and editing a webpage in real time ver
 
 ### Testing
 
-![Early Iteration](https://raw.githubusercontent.com/Twarner491/ContunityTestingRig/main/assets/ContTestWorking.mp4)
+<video controls="controls" width="800" height="600" name="Early Iteration">
+  <source src="./assets/ContTestWorking.mp4">
+</video>
 
-![](https://lh5.googleusercontent.com/0GVkfh_DIdbBJlL_fOxFQUjcdMgFYwVumCB7ItI6uI0POPO9G1cycs-ywQQY8XpH_Hcj7f5Dsf_8AparOaUCarbp74y6nYTkM4nmMRn2sDrcxOtlcUwAbor1zFeUYJ7RAG4Sx1jPplNZ7YllzcWxy2Csjg=s2048)
-
-![Final Test](https://raw.githubusercontent.com/Twarner491/ContunityTestingRig/main/assets/FinalConTestRig.mov)
+<video controls="controls" width="800" height="600" name="Final Test">
+  <source src="./assets/FinalConTestRig.mov">
+</video>
 
 ### Assembly Instructions
 
