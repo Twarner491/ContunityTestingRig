@@ -23,11 +23,11 @@ The testing rig will likely consist of two separate boards, one main logic and i
 
 We used a few methods to allow the project to be operable on the Raspberry Pico. We designed and implemented an array of diodes to convert any individual input into a binary representation of its pin value, allowing us to test and read 15 possible different wires through 4 input pins. For the header connector board, we designed custom eagle footprints and libraries for the two types of connectors, as well as adding self-test circuits that will connect pins through the switch of a transistor.
 
-![](https://lh5.googleusercontent.com/rti6v7MuPoyAlh03Rgtjose6RkwOiT6HDU5eBfhmoVqr0T_wuMiu1hlBDJiy092YbsoZHYx3oSAhuqF3QlTbc4UCl5dsF80yNbaRRKSmxW5B6DqxrxRZZBW0vMJAmhmWeZuZ9oWIv41tCbujap0o5KirLg=s2048)
-![](https://lh3.googleusercontent.com/cMdF-teHQxVOvGYpneJAn0zXiHT1dFFI5fvLKQRQbJpv8RHehAfNGU73r3o31gr1EP6dDgbDEEDF1B0HM5gGeQOkDQfHyef0X2F3Lgqb7r4D55xVImUkteW9xgoWqOMfXfpn0UXRooC1vwiH2_BYSRMTFw=s2048) 
+![Breakout_sch](https://github.com/user-attachments/assets/05594324-8c52-4d4d-940a-5015e21fb2b6)
+![Breakout_brd](https://github.com/user-attachments/assets/df76eae6-304d-48cf-88b6-c798345f3247)
 
-![](https://lh6.googleusercontent.com/PpNnPEPs2V1s2-iVDTer5H3JRJICPiVzRWn0-L2HJNxlAWdNjlRm-dqk6xnFquJHVEl8-ZhuZGOaEludGKbU2ZoQUVoHJWmcbJ_KSOaxIPxAa4P-S2X05NZwkroI0ZWbiWWKI9BGTL8ITBJ5zSVxrKw3SA=s2048)
-![](https://lh6.googleusercontent.com/glCV0ZEE7p7d8JUqK5hKd7d5XOA3o-3Q7VWxhmznj_fHIiKKrdJec50pPnnKXsBw4Qx0jf8ccoDCEMV9NSh6b9nsnBFJW4zxTWpi9kb0kBUPohX4K9agHCRQjOyXUTlSiKPYwA9SUXvf4wVP3YoQgeJa0w=s2048)
+![Header_sch](https://github.com/user-attachments/assets/e8bdf2f5-89b5-49f2-be88-a63eae7b841a)
+![Header_brd](https://github.com/user-attachments/assets/64e31092-856b-4154-8d6e-9a665f7c077d)
 
 Our project went somewhat to plan. Due to some issues in the testing of our board due to the precision of our lab’s PCB mills as well as the complexity of our board, we had some issues testing the main board. We eventually fixed a bug in the diode array, and the main board was working. The header board took less time, as it was less complex, but due to some issues with voltages jumping across transistors despite no source voltage, we were unable to include our initially planned self test function. After discussions with Rhythmlink, however, we determined that this would not be an issue, and since the board worked without the transistors soldered, we continued with testing. Web and software design and testing took the majority of our allocated time, as this was the first project of this type for both of us, so it took some getting used to programming a web server through micropython.
 
