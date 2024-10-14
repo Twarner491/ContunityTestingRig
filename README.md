@@ -23,11 +23,11 @@ The testing rig will likely consist of two separate boards, one main logic and i
 
 We used a few methods to allow the project to be operable on the Raspberry Pico. We designed and implemented an array of diodes to convert any individual input into a binary representation of its pin value, allowing us to test and read 15 possible different wires through 4 input pins. For the header connector board, we designed custom eagle footprints and libraries for the two types of connectors, as well as adding self-test circuits that will connect pins through the switch of a transistor.
 
-<img src="./assets/Breakout_sch.png" width="300" />
-<img src="./assets/Breakout_brd.png" width="300" />
+<img src="./assets/Breakout_sch.png" width="500" />
+<img src="./assets/Breakout_brd.png" width="500" />
 
-<img src="./assets/Header_sch.png" width="300" />
-<img src="./assets/Header_brd.png" width="300" />
+<img src="./assets/Header_sch.png" width="500" />
+<img src="./assets/Header_brd.png" width="500" />
 
 Our project went somewhat to plan. Due to some issues in the testing of our board due to the precision of our lab’s PCB mills as well as the complexity of our board, we had some issues testing the main board. We eventually fixed a bug in the diode array, and the main board was working. The header board took less time, as it was less complex, but due to some issues with voltages jumping across transistors despite no source voltage, we were unable to include our initially planned self test function. After discussions with Rhythmlink, however, we determined that this would not be an issue, and since the board worked without the transistors soldered, we continued with testing. Web and software design and testing took the majority of our allocated time, as this was the first project of this type for both of us, so it took some getting used to programming a web server through micropython.
 
