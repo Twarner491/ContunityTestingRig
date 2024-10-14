@@ -23,6 +23,7 @@ The testing rig will likely consist of two separate boards, one main logic and i
 
 We used a few methods to allow the project to be operable on the Raspberry Pico. We designed and implemented an array of diodes to convert any individual input into a binary representation of its pin value, allowing us to test and read 15 possible different wires through 4 input pins. For the header connector board, we designed custom eagle footprints and libraries for the two types of connectors, as well as adding self-test circuits that will connect pins through the switch of a transistor.
 
+<img src="./assets/Breakout_sch.png" width="300" />
 ![Breakout_sch](https://github.com/user-attachments/assets/05594324-8c52-4d4d-940a-5015e21fb2b6)
 ![Breakout_brd](https://github.com/user-attachments/assets/df76eae6-304d-48cf-88b6-c798345f3247)
 
