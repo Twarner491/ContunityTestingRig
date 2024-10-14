@@ -49,7 +49,9 @@ The operation of the Pico makes designing and editing a webpage in real time ver
 
 
 
-### Testinghttps://github.com/Twarner491/ContunityTestingRig/blob/main/assets/ContTestWorking.mp4
+### Testing
+[![Early Testing]()](https://github.com/Twarner491/ContunityTestingRig/blob/main/assets/ContTestWorking.mp4)
+https://github.com/Twarner491/ContunityTestingRig/blob/main/assets/ContTestWorking.mp4
 <video src="[./assets/ContTestWorking.mp4](https://github.com/Twarner491/ContunityTestingRig/blob/main/assets/ContTestWorking.mp4)" width="320" height="240" controls></video>
 
 <video width="800" controls>
